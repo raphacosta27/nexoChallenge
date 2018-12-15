@@ -9,6 +9,17 @@ $(document).ready(() => {
         $('#idToken').text("Your idToken: " + idToken)
     }
 
+    fetch("http://api.giphy.com/v1/gifs/random?api_key=aBoQiKdp9Ofbkc5Lt0pKVOqNHfxZDKH4", {
+        method: "GET"
+    }).then((response) => {
+        response.json().then((data) => {
+            $("#gif").append(
+                "<img src ='"+ data.data.image_url +"' height='200' width='200'>"
+            )
+            console.log(data.data.url)
+        })
+    })
+
     fetch(server+"/getTarefas", {
         method: "POST",
         body: JSON.stringify({idToken: localStorage.idToken})
