@@ -40,7 +40,6 @@ def signup():
     print("SIGNUP REQUEST: ", email, password)
     try:
         user = auth.create_user_with_email_and_password(email, password)
-        db.child("userCounter").set({0}, user['idToken'])
         return json.dumps({"status": "200", "email": email, "password": password, "idToken": user["idToken"]}, default=lambda x: x.__dict__) 
     except:
         return json.dumps({"status": "404"}, default=lambda x: x.__dict__) 

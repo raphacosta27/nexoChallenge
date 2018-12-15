@@ -4,6 +4,10 @@ $(document).ready(() => {
     if(email){
         $('#user').text(email)
     }
+    idToken = localStorage.getItem('idToken')
+    if(idToken){
+        $('#idToken').text("Your idToken: " + idToken)
+    }
 
     fetch(server+"/getTarefas", {
         method: "POST",
@@ -41,6 +45,14 @@ $(document).ready(() => {
             }
         })
     })
+
+  $("#signOut").click((e) => {
+      console.log("signout")
+      localStorage.removeItem('email')
+      localStorage.removeItem('password')
+      localStorage.removeItem('idToken')
+    //   window.location.replace("http://localhost:5000/")	
+  })
 
   $("#addButton").click((e) => {
     title = $("#title").val()

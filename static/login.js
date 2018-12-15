@@ -55,6 +55,7 @@ $(document).ready(() => {
 								localStorage.setItem('email', data.email);		
 								localStorage.setItem('password', data.password);		
 								localStorage.setItem('idToken', data.idToken);		
+								window.location.replace("/index	")
 							}
 							else{
 								if(data.status == "404"){
