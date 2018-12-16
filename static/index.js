@@ -6,7 +6,7 @@ $(document).ready(() => {
     }
     idToken = localStorage.getItem('idToken')
     if(idToken){
-        $('#idToken').text("Your idToken: " + idToken)
+        $('#idToken').text("Seu idToken: " + idToken)
     }
 
     fetch("http://api.giphy.com/v1/gifs/random?api_key=aBoQiKdp9Ofbkc5Lt0pKVOqNHfxZDKH4", {
