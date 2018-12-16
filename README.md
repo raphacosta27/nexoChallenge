@@ -44,7 +44,7 @@ Observações:
 - Ao fim da página, em cinza claro, pode ser visto a idToken do usuário. Deixei visível apesar do tamanho para facilitar a avaliação. 
 
 Problemas encontrados e implementações futuras
-- Perto do final, descobri que apesar do pyrebase criar uma chave única para o usuário, ao parsear este token para dar push no documento, a key de cada tarefa no Firebase, esta key está presente na chave de outro usuário. Resumindo: queria que cada usuário tivesse suas tarefas sem que outro usuário pudesse visializar, mas por falta de tempo, não consegui fazer tal correção. Em contrapartida, o idToken de cada usuário esta correto e é único. Abaixo segue uma imagem exemplificando como as tarefas são guardadas no Firebase.
+- Perto do final, descobri que apesar do pyrebase criar uma chave única para o usuário, ao parsear este token para dar push no documento, a key de cada tarefa no Firebase, esta key está presente na chave de outro usuário. Resumindo: queria que cada usuário tivesse suas tarefas sem que outro usuário pudesse visializar, mas por falta de tempo, não consegui fazer tal correção. Em contrapartida, o idToken de cada usuário esta correto e é único. Abaixo segue uma imagem exemplificando como as tarefas são guardadas no Firebase. A key de cada documento é um parse do Token do usuário, assim como ja citado. 
 
 ![Imagem das tarefas](https://github.com/raphacosta27/nexoChallenge/blob/master/tarefas.png)
 
