@@ -3,12 +3,12 @@ import json
 import pyrebase 
 
 config = {
-    "apiKey": "AIzaSyDQyHhpsSepLEtFaFjhQWBOssfK-gLpvkI",
-    "authDomain": "nexochallenge.firebaseapp.com",
-    "databaseURL": "https://nexochallenge.firebaseio.com",
-    "projectId": "nexochallenge",
-    "storageBucket": "nexochallenge.appspot.com",
-    "messagingSenderId": "84073883170"
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": ""
 }
 
 firebase = pyrebase.initialize_app(config)
